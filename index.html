@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My personal Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/accessibility.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=REM&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=REM&family=Roboto&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all .2s ease-in-out;
+            font-family: "Poppins", 'Roboto';
+        }
+
+        #header-line {
+            font-size: 25px;
+            font-weight: 600;
+            text-transform: capitalize;
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        #header-line::after {
+            content: '';
+            background-color: #000;
+            width: 0%;
+            height: 5px;
+            position: absolute;
+            top: 35px;
+            left: 190px;
+            transition: width .6s ease-out;
+            border-radius: 25px;
+            bottom: 0;
+            animation: line 8s linear infinite;
+        }
+
+        #header-line::before {
+            content: '';
+            background-color: #000;
+            width: 0;
+            height: 5px;
+            position: absolute;
+            top: 35px;
+            right: 190px;
+            transition: width .6s ease-out;
+            border-radius: 25px;
+            bottom: 0;
+            animation: line 8s linear infinite;
+        }
+
+        #header-line:hover::after {
+            width: 50%;
+            animation: line 5s linear infinite;
+        }
+
+        #header-line:hover::before {
+            width: 50%;
+            animation: line 5s linear infinite;
+        }
+
+        @keyframes line {
+            0% {
+                width: 0%;
+                background-color: #000;
+            }
+
+            50% {
+                width: 40%;
+                background-color: #000;
+
+            }
+
+            100% {
+                width: 0%;
+                background-color: lightblue;
+            }
+        }
+
+
+
+
+
+
+        .container-about-us {
+            justify-content: space-between;
+            width: 85%;
+            display: flex;
+            margin: 100px 200px;
+            padding: 35px auto;
+            align-items: center;
+
+        }
+
+        .about-me {
+            display: inline-block;
+            margin: 0 20px;
+            width: 85%;
+            font-family: 'Poppins';
+            font-size: 22px;
+        }
+
+        .image-1 {
+            width: 400px;
+            border-radius: 25px;
+            box-shadow: 0 0 10px grey;
+            cursor: pointer;
+        }
+
+        .intro-container {
+            color: darkblue;
+            font-size: 32px;
+            margin-top: 50px;
+            display: inline-flex;
+            text-align: center;
+            position: relative;
+            left: 15%;
+        }
+
+        .second-2 {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            top: 45px;
+            border-radius: 100%;
+            animation: size 10s linear infinite;
+        }
+
+        .second-1 {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            border-radius: 100%;
+        }
+
+        @keyframes size {
+            0% {
+                width: 100px;
+                height: 100px;
+                rotate: 0deg;
+            }
+
+            50% {
+                width: 200px;
+                height: 200px;
+                rotate: 180deg;
+            }
+
+            100% {
+                width: 100px;
+                height: 100px;
+                rotate: 0deg;
+            }
+        }
+
+        .container {
+            margin: 40px auto;
+        }
+
+        button {
+            background-color: #fff;
+            color: #000;
+            padding: 10px 20px;
+            display: inline;
+            border: 5px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: green;
+            color: #eee;
+            padding: 10px 20px;
+            display: inline;
+            border: 5px solid #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .side-container {
+            width: 60%;
+            height: 600px;
+            margin-top: -500px;
+            background-color: green;
+            transform: translate(-950px);
+            border-radius: 5px;
+            opacity: 0.7;
+            transition: 0.3s ease-out;
+        }
+
+        .side-container:hover {
+            opacity: 1;
+        }
+
+        #second-2 {
+            float: right;
+        }
+
+        .second-side-container {
+            position: relative;
+            top: 50px;
+        }
+
+        .second-side-container ul li {
+            padding: 10px;
+            list-style-type: none;
+        }
+
+        .second-side-container li a {
+            text-decoration: none;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            background-color: #00beef;
+            width: 100%;
+            height: 600px;
+        }
+
+        .col {
+            width: 250px;
+            padding: 10px;
+            margin: 100px;
+            display: inline-flex;
+            background-color: yellow;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .col,
+        img {
+            width: 280px;
+            border-radius: 5px;
+            transform: scale(0.9);
+        }
+
+        .col,
+        img:hover {
+            transform: scale(1);
+        }
+
+        .col,
+        p {
+            display: inline-block;
+        }
+
+        .col-1 {
+            width: 80%;
+            display: inline-flex;
+            font-family: 'Roboto';
+            border: 1px solid #fff;
+            font-size: 32px;
+            position: relative;
+            top: 15px;
+        }
+
+        .col-1 p {
+            width: 100%;
+            display: inline-flex;
+            color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h3 id="header-line">"Transforming designs into interactive and engaging user interfaces as front-end developers."
+    </h3>
+
+
+    <div class="intro-container">
+        <h2 class="intro-container">HI, I AM KIRAN <img class="second-2" src="https://clipart-library.com/images_k/smiley-emoji-transparent-background/smiley-emoji-transparent-background-13.png" /></h2>
+    </div>
+
+
+
+
+
+
+
+    <div class="container-about-us">
+        <div class="img"><img class="image-1"
+                src="https://www.onlinecoursereport.com/wp-content/uploads/2020/06/shutterstock_1150510607-2048x1024.jpg"
+                alt="none" width="300" /></div>
+        <div class="about-us-border">
+            <div class="about-me">
+                <p>As a front-end developer, I am passionate about creating captivating and user-centric web
+                    experiences. With a solid foundation in HTML, CSS, and JavaScript, I strive to bring designs to life
+                    and ensure seamless functionality across various devices. Constantly exploring new technologies and
+                    design trends, I am committed to staying at the forefront of web development to deliver innovative
+                    and engaging solutions that leave a positive impact on users. <button onclick="myFunction()">Know
+                        more!</button></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="side-container" id="side">
+        <button onclick="myFunction1()" id="second-2">click me to close</button>
+        <div class="second-side-container">
+            <ul>
+                <div class="col-1">
+                    <li><a href="#" target="_blank">Personal Portfolio in React js.</a></li>
+                </div>
+                <div class="col-1">
+                    <li><a href="#" target="_blank">Purchase online Tech Products app in React js.</a></li>
+                </div>
+                <div class="col-1">
+                    <li><a href="#" target="_blank">Todo list in React js.</a></li>
+                </div>
+                <div class="col-1">
+                    <li><a href="#" target="_blank">Random Quote API  App in React js.</a></li>
+                </div>
+                <div class="col-1">
+                    <p>Contact Me: +91 9769442052</p>
+                </div>
+
+                <div class="col-1">
+                    <p>Home Town:Chembur, Mumbai, Maharashtra, India</p>
+                </div>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col">
+            <img src="./image2.png" alt="none">
+            <p>A Todo list Application in React js</p>
+            <p>Very easily made with react hooks</p>
+            <button>Read More</button>
+        </div>
+
+        <div class="col">
+
+            <img src="./image1.png" alt="none">
+            <p>random Quote app</p>
+            <p>"Get more Detailed Information !"</p>
+            <button>click me</button>
+        </div>
+
+        <div class="col">
+
+            <img src="./amazon-best-sellers.png"
+                alt="none">
+            <p>Buy some online Products for kids</p>
+            <p>"Get more Detailed Information"</p>
+            <button>Read More</button>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        function myFunction() {
+            let c = document.getElementById('side').style.transform = 'translate(0px)';
+            document.getElementById('side').style.transition = '0.8s ease-in-out';
+        }
+
+        function myFunction1() {
+            let a = document.querySelector('.side-container').style.transform = 'translate(-950px)';
+        }
+
+
+    </script>
+</body>
+
+</html>
